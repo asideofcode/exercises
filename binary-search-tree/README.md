@@ -44,6 +44,46 @@ Below are the tasks you need to complete:
     Your task is to implement the `update_inventory` method.
 
 
-## Validation
+## Validate your work
 
-Validate your code changes by running `./test` in the working directory for your language of choice. Without any changes to the source code the tests will fail. Your task is to make all the unit tests pass. Good luck!
+The first step is for you to clone this repository and make sure you can run the unit tests for your language of choice.
+
+1. Clone the repo
+    ```shell
+    git clone https://github.com/asideofcode/exercises.git
+    ```
+2. Change directory into the exercise folder for your language of choice. Below I provide the example of using the `node-js` folder
+    ```shell
+    cd ./exercises/binary-search-tree/node-js/
+    ```
+3. Install any dependencies. This depends on the language you decide to use e.g. in the `node-js` folder you must run `npm install` because
+    `mocha` is used as the unit test runner in this instance.
+4. Run the unit tests. You should see that all the tests are failing, and there will likely be errors telling you that there are methods that have yet to be implemented.
+    ```shell
+    ./test
+    ```
+
+Now you need to modify the source files in order to get the tests passing, as is detailed in the [Instructions](#Instructions) section. For example, in the `node-js` folder you can open the `./inventory-management.js` file and update the `buildTree` function definition on line 29 from:
+```js
+    buildTree(products) {
+        console.error("you must implement buildTree");
+    }
+```
+
+to:
+
+```js
+    buildTree(products) {
+        // console.error("you must implement buildTree");
+        return this.exampleBuildTree(products)
+    }
+```
+
+Run the unit tests again
+```shell
+./test
+```
+
+You should see that 1 of the unit tests is now passing, namely `✔ should build a binary search tree sorted by product ID`. What you did above is implement `buildTree`, albeit using the example implementation provided. You can try to implement it on your own or move on to making the next test pass.
+
+It's a similar exercise for the other languages. Make code changes and validate them running `./test` in the working directory of your language of choice. Without any changes to the source code the tests will fail. Your task is to make all the unit tests pass. Good luck!
