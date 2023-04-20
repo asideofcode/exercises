@@ -15,7 +15,7 @@ We have:
 
 3. Defined the `BinarySearchTree` class with the `root` attribute and thed methods `build_tree`, `search` and `update_inventory` to be implemented by you.
 
-4. Created an `rspec` test suite that validates the behavior of the code.
+4. Created a test suite that validates the behavior of the code.
 
 Below are the tasks you need to complete:
 
@@ -46,56 +46,4 @@ Below are the tasks you need to complete:
 
 ## Validation
 
-To validate your code changes you have to run `rspec .` in the directory of this particular exercise. Without any changes the output with look as it does below. Your job is to make all the rspec tests turn green. Good luck!
-
-```bash
-@asideofcode ➜ /workspaces/exercises/binary-search-tree-ruby (main) $ rspec .
-FFFF
-
-Failures:
-
-  1) BinarySearchTree#build_tree builds a binary search tree sorted by product ID
-     Failure/Error: bst.build_tree(products)
-     
-     RuntimeError:
-       you must implement build_tree
-     # ./exercise.rb:47:in `build_tree'
-     # ./exercise_spec.rb:23:in `block (3 levels) in <top (required)>'
-
-  2) BinarySearchTree#update_inventory updates the inventory count for the product with the given ID
-     Failure/Error: bst.build_tree(products)
-     
-     RuntimeError:
-       you must implement build_tree
-     # ./exercise.rb:47:in `build_tree'
-     # ./exercise_spec.rb:48:in `block (3 levels) in <top (required)>'
-     # ./exercise_spec.rb:54:in `block (3 levels) in <top (required)>'
-
-  3) BinarySearchTree#search returns the product with the given valid ID
-     Failure/Error: bst.build_tree(products)
-     
-     RuntimeError:
-       you must implement build_tree
-     # ./exercise.rb:47:in `build_tree'
-     # ./exercise_spec.rb:80:in `block (3 levels) in <top (required)>'
-     # ./exercise_spec.rb:86:in `block (3 levels) in <top (required)>'
-
-  4) BinarySearchTree#search returns nil if the product with the given ID does not exist in the tree
-     Failure/Error: bst.build_tree(products)
-     
-     RuntimeError:
-       you must implement build_tree
-     # ./exercise.rb:47:in `build_tree'
-     # ./exercise_spec.rb:80:in `block (3 levels) in <top (required)>'
-     # ./exercise_spec.rb:92:in `block (3 levels) in <top (required)>'
-
-Finished in 0.00427 seconds (files took 0.09341 seconds to load)
-4 examples, 4 failures
-
-Failed examples:
-
-rspec ./exercise_spec.rb:18 # BinarySearchTree#build_tree builds a binary search tree sorted by product ID
-rspec ./exercise_spec.rb:52 # BinarySearchTree#update_inventory updates the inventory count for the product with the given ID
-rspec ./exercise_spec.rb:84 # BinarySearchTree#search returns the product with the given valid ID
-rspec ./exercise_spec.rb:90 # BinarySearchTree#search returns nil if the product with the given ID does not exist in the tree
-```
+Validate your code changes by running `./test` in the working directory for your language of choice. Without any changes to the source code the tests will fail. Your task is to make all the unit tests pass. Good luck!
