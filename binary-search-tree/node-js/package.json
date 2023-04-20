@@ -1,0 +1,15 @@
+{
+  "name": "inventory-management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "inventory-management.js",
+  "scripts": {
+    "test": "mocha inventory-management.test.js"
+  },  
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}
