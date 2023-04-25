@@ -7,7 +7,7 @@ class TreeNode {
 }
 
 class Product {
-    constructor({id, inventoryCount}) {
+    constructor({ id, inventoryCount }) {
         this.id = id;
         this.inventoryCount = inventoryCount;
     }
@@ -19,7 +19,34 @@ class BinarySearchTree {
     }
 
     search(id) {
-        console.error("you must implement search");
+        // console.error("you must implement search");
+        return this.exampleSearch(id);
+    }
+    exampleSearch(id) {
+        if (this.root.val.id = id) {
+            return this.root;
+        } else {
+            this.checkId(id, this.root);
+        }
+    }
+    checkId(id, node) {
+        if (node === null) {
+            return null;
+        } else {
+            if (id < node.val.id) {
+                if (node.left === id) {
+                    return node.left;
+                } else {
+                    this.checkId(id, node.left)
+                }
+            } else if (id > node.val.id) {
+                if (node.right === id) {
+                    return node.right
+                } else {
+                    this.checkId(id, node.right)
+                }
+            }
+        }
     }
 
     updateInventory(id, inventoryCount) {
@@ -27,7 +54,8 @@ class BinarySearchTree {
     }
 
     buildTree(products) {
-        console.error("you must implement buildTree");
+        // console.error("you must implement buildTree");
+        return this.exampleBuildTree(products);
     }
 
     // An example implementation of how you might approach building the binary search tree from a list of products

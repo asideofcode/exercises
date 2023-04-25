@@ -5,7 +5,7 @@
   "main": "inventory-management.js",
   "scripts": {
     "test": "mocha inventory-management.test.js"
-  },  
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
