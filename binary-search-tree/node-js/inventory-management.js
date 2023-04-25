@@ -20,32 +20,24 @@ class BinarySearchTree {
 
     search(id) {
         // console.error("you must implement search");
-        return this.exampleSearch(id);
+        return this.checkId(id, this.root);
     }
-    exampleSearch(id) {
-        if (this.root.val.id = id) {
-            return this.root;
-        } else {
-            this.checkId(id, this.root);
-        }
-    }
+    // exampleSearch(id) {
+    //     if (this.root.val.id === id) {
+    //         return this.root;
+    //     } else {
+    //         this.checkId(id, this.root);
+    //     }
+    // }
     checkId(id, node) {
         if (node === null) {
             return null;
+        } else if (id === node.val.id) {
+            return node;
+        } else if (id < node.val.id) {
+            return this.checkId(id, node.left);
         } else {
-            if (id < node.val.id) {
-                if (node.left === id) {
-                    return node.left;
-                } else {
-                    this.checkId(id, node.left)
-                }
-            } else if (id > node.val.id) {
-                if (node.right === id) {
-                    return node.right
-                } else {
-                    this.checkId(id, node.right)
-                }
-            }
+            return this.checkId(id, node.right);
         }
     }
 
