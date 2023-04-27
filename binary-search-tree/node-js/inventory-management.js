@@ -33,7 +33,7 @@ class BinarySearchTree {
         if (node === null) {
             return null;
         } else if (id === node.val.id) {
-            return node;
+            return node.val;
         } else if (id < node.val.id) {
             return this.checkId(id, node.left);
         } else {
@@ -42,7 +42,12 @@ class BinarySearchTree {
     }
 
     updateInventory(id, inventoryCount) {
-        console.error("you must implement updateInventory");
+        // console.error("you must implement updateInventory");
+        const node = this.checkId(id, this.root);
+
+        if (node === null) return;
+        node.inventoryCount = inventoryCount;
+        return node.inventoryCount;
     }
 
     buildTree(products) {
