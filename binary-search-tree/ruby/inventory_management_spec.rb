@@ -1,4 +1,4 @@
-require "./exercise"
+require "./inventory_management"
 
 RSpec.describe BinarySearchTree do
   describe "#build_tree" do
