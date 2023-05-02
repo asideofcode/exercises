@@ -44,7 +44,8 @@ class BinarySearchTree
 
   def build_tree(products)
     # Comment out the line below and make changes here
-    raise "you must implement build_tree"
+    # raise "you must implement build_tree"
+    example_build_tree(products)
   end
 
   private
