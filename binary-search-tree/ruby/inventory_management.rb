@@ -34,12 +34,13 @@ class BinarySearchTree
 
   def search(id)
     # Comment out the line below and make changes here
-    raise "you must implement search"
+    # raise "you must implement search"
+    insert_node(@root, id)
   end
 
   def update_inventory(id, inventory_count)
     # Comment out the line below and make changes here
-    raise "you must implement update_inventory"
+    # raise "you must implement update_inventory"
   end
 
   def build_tree(products)
