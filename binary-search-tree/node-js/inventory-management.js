@@ -19,15 +19,32 @@ class BinarySearchTree {
     }
 
     search(id) {
-        console.error("you must implement search");
+        this.root
     }
-
+        // console.error("you must implement search");
+        // 1. Start from the root node
+        // 2. Compare the current node with the search value. Return early if found
+        // 3. Determine if we should go left or right
+        // 4. Update the current node based on the decision from (3). Rinse and repeat from (2)
+    
+    searchRecursive(id, currentNode) {
+        if(currentNode.val.id === id ) {
+            return currentNode
+        }
+        else if (id > currentNode.val.id) {
+            return this.searchRecursive(id, currentNode.right)
+        }
+        else (id < currentNode.val.id) 
+            return this.searchRecursive(id, currentNode.left)
+    };
+    
     updateInventory(id, inventoryCount) {
-        console.error("you must implement updateInventory");
+        
     }
 
     buildTree(products) {
-        console.error("you must implement buildTree");
+        // console.error("you must implement buildTree");
+        return this.exampleBuildTree(products)
     }
 
     // An example implementation of how you might approach building the binary search tree from a list of products

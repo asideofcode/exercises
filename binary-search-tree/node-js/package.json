@@ -4,8 +4,9 @@
   "description": "",
   "main": "inventory-management.js",
   "scripts": {
-    "test": "mocha inventory-management.test.js"
-  },  
+    "test": "mocha inventory-management.test.js", 
+    "gem":  "echo this is gem"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
