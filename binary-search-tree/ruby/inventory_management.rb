@@ -37,15 +37,17 @@ class BinarySearchTree
     # raise "you must implement search"
     node = @root
 
-    if node == nil
-      nil
-    elsif node.val == id
-      node
-    elsif id < node.val
-      node = node.left
-    else 
-      node = node.right
+    while node != nil
+      if node.val.id == id
+        return node
+      elsif id < node.val.id
+        node = node.left
+      else
+        node = node.right
+      end
     end
+
+    return nil
 
   end
 
