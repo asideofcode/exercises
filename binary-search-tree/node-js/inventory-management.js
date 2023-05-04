@@ -40,6 +40,7 @@ class BinarySearchTree {
     
     updateInventory(id, inventoryCount) {
         
+        return this.searchRecursive(id, currentNode)
     }
 
     buildTree(products) {
