@@ -39,7 +39,7 @@ class BinarySearchTree
 
     while node != nil
       if node.val.id == id
-        return node
+        return node.val
       elsif id < node.val.id
         node = node.left
       else
