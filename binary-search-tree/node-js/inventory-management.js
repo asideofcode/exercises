@@ -10,6 +10,10 @@ class Product {
     constructor({id, inventoryCount}) {
         this.id = id;
         this.inventoryCount = inventoryCount;
+        this.inventoryCount = 0;
+    }
+    inventoryCount() {
+        this.inventoryCount ++; 
     }
 }
 
@@ -19,7 +23,7 @@ class BinarySearchTree {
     }
 
     search(id) {
-            return this.searchRecursive(id)
+            return this.searchRecursive(id, this.root);
         }
         // console.error("you must implement search");
         // 1. Start from the root node
@@ -27,27 +31,27 @@ class BinarySearchTree {
         // 3. Determine if we should go left or right
         // 4. Update the current node based on the decision from (3). Rinse and repeat from (2)
     searchRecursive(id, currentNode) {
-        if (currentNode.val.id === null) {
-            return null;
+        if (currentNode === null) {
+            return null ;
         }
         else if(currentNode.val.id === id ) {
-            return currentNode;
+            return currentNode.val;
         }
         else if (id > currentNode.val.id) {
             return this.searchRecursive(id, currentNode.right);
         }
-        else if (id< currentNode.val.id) {
+        else {
             return this.searchRecursive(id, currentNode.left);
         }
-        else {
-            return;
-        }
-            
     };
     
     updateInventory(id, inventoryCount) {
-        
-        return this.searchRecursive(id, currentNode)
+        const currentNode = this.searchRecursive(id, this.root);
+        if (currentNode === null) {
+            return;
+        }
+        currentNode.inventoryCount = inventoryCount;
+        return currentNode.inventoryCount;
     }
 
     buildTree(products) {
