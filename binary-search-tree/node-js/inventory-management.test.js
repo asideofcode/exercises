@@ -1,8 +1,8 @@
 const assert = require('assert');
-const {Product, BinarySearchTree, inorderTraversal} = require('./inventory-management');
+const { Product, BinarySearchTree, inorderTraversal } = require('./inventory-management');
 
-describe('BinarySearchTree', function() {
-  describe('#buildTree()', function() {
+describe('BinarySearchTree', function () {
+  describe('#buildTree()', function () {
     const products = [
       new Product({ id: 10, inventoryCount: 5 }), // index: 0 => sort order: 4
       new Product({ id: 6, inventoryCount: 2 }), // index: 1 => sort order: 2
@@ -12,7 +12,7 @@ describe('BinarySearchTree', function() {
       new Product({ id: 15, inventoryCount: 4 }), // index: 5 => sort order: 6
     ];
 
-    it('should build a binary search tree sorted by product ID', function() {
+    it('should build a binary search tree sorted by product ID', function () {
       const bst = new BinarySearchTree();
       bst.buildTree(products);
 
@@ -25,8 +25,8 @@ describe('BinarySearchTree', function() {
     });
   });
 
-  describe('#updateInventory()', function() {
-    const productSix = new Product({ id: 14, inventoryCount: 7 });
+  describe('#updateInventory()', function () {
+    const productSix = new Product({ id: 6, inventoryCount: 7 });
 
     const products = [
       new Product({ id: 10, inventoryCount: 5 }),
@@ -40,13 +40,13 @@ describe('BinarySearchTree', function() {
     const bst = new BinarySearchTree();
     bst.buildTree(products);
 
-    it('should update the inventory count for the product with the given ID', function() {
+    it('should update the inventory count for the product with the given ID', function () {
       bst.updateInventory(6, 8);
       assert.strictEqual(productSix.inventoryCount, 8);
     });
   });
 
-  describe('#search()', function() {
+  describe('#search()', function () {
     const productSix = new Product({ id: 6, inventoryCount: 2 });
     const productNine = new Product({ id: 9, inventoryCount: 6 });
 
@@ -62,12 +62,12 @@ describe('BinarySearchTree', function() {
     const bst = new BinarySearchTree();
     bst.buildTree(products);
 
-    it('should return the product with the given valid ID', function() {
+    it('should return the product with the given valid ID', function () {
       assert.strictEqual(bst.search(6), productSix);
       assert.strictEqual(bst.search(9), productNine);
     });
 
-    it('should return null if the product with the given ID does not exist in the tree', function() {
+    it('should return null if the product with the given ID does not exist in the tree', function () {
       assert.strictEqual(bst.search(20), null);
     });
   });

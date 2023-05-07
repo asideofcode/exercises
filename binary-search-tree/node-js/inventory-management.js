@@ -43,11 +43,11 @@ class BinarySearchTree {
 
     updateInventory(id, inventoryCount) {
         // console.error("you must implement updateInventory");
-        const node = this.checkId(id, this.root);
+        const product = this.checkId(id, this.root);
 
-        if (node === null) return;
-        node.inventoryCount = inventoryCount;
-        return node.inventoryCount;
+        if (product === null) return;
+        product.inventoryCount = inventoryCount;
+        return product.inventoryCount;
     }
 
     buildTree(products) {
