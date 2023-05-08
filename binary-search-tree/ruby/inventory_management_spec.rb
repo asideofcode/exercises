@@ -83,8 +83,8 @@ RSpec.describe BinarySearchTree do
 
     it "returns the product with the given valid ID" do
       # Test that the search method returns the expected product when given a valid ID
-      expect(bst.search(6)).to eq product_nine
-      expect(bst.search(9)).to eq product_six
+      expect(bst.search(6)).to eq product_six
+      expect(bst.search(9)).to eq product_nine
     end
 
     it "returns nil if the product with the given ID does not exist in the tree" do
