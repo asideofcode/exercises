@@ -34,14 +34,21 @@ class BinarySearchTree {
         if (currentNode === null) {
             return null ;
         }
+        else if (currentNode === undefined) {
+            console.log(currentNode);
+            return;
+        }
         else if(currentNode.val.id === id ) {
             return currentNode.val;
         }
         else if (id > currentNode.val.id) {
             return this.searchRecursive(id, currentNode.right);
         }
-        else {
+        else if (id < currentNode.val.id) {
             return this.searchRecursive(id, currentNode.left);
+        }
+        else {
+            return;
         }
     };
     
