@@ -55,6 +55,11 @@ class BinarySearchTree
   def update_inventory(id, inventory_count)
     # Comment out the line below and make changes here
     # raise "you must implement update_inventory"
+    node = search(id)
+
+    if node
+      node.inventory_count = inventory_count
+    end
   end
 
   def build_tree(products)
