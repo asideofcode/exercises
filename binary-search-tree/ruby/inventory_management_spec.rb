@@ -31,7 +31,7 @@ RSpec.describe BinarySearchTree do
   describe "#update_inventory" do
     # Seperately create the product whose inventory count we intend to update so that we can use it in our test assertions
     let (:product_six) do
-      Product.new(id: 14, inventory_count: 8)
+      Product.new(id: 14, inventory_count: 7)
     end
 
     # Create a new binary search tree and populate it with products
@@ -51,7 +51,7 @@ RSpec.describe BinarySearchTree do
 
     it "updates the inventory count for the product with the given ID" do
       # Update the inventory count for the product with ID 6 to 8
-      bst.update_inventory(6, 8)
+      bst.update_inventory(14, 8)
       # Check that the inventory count for the product with ID 6 is now 8
       expect(product_six.inventory_count).to eq 8
     end
