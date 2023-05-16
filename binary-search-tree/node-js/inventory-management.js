@@ -10,7 +10,7 @@ class Product {
     constructor({id, inventoryCount}) {
         this.id = id;
         this.inventoryCount = inventoryCount;
-        this.inventoryCount ++;
+        
        
     }
 }

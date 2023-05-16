@@ -26,7 +26,7 @@ describe('BinarySearchTree', function() {
   });
 
   describe('#updateInventory()', function() {
-    const productSix = new Product({ id: 14, inventoryCount: 7 });
+    const productSix = new Product({ id: 6, inventoryCount: 7 });
 
     const products = [
       new Product({ id: 10, inventoryCount: 5 }),
