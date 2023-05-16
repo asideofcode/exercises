@@ -10,10 +10,8 @@ class Product {
     constructor({id, inventoryCount}) {
         this.id = id;
         this.inventoryCount = inventoryCount;
-        this.inventoryCount = 0;
-    }
-    inventoryCount() {
-        this.inventoryCount ++; 
+        this.inventoryCount ++;
+       
     }
 }
 
@@ -35,7 +33,6 @@ class BinarySearchTree {
             return null ;
         }
         else if (currentNode === undefined) {
-            console.log(currentNode);
             return;
         }
         else if(currentNode.val.id === id ) {
@@ -58,7 +55,6 @@ class BinarySearchTree {
             return;
         }
         currentNode.inventoryCount = inventoryCount;
-        return currentNode.inventoryCount;
     }
 
     buildTree(products) {
@@ -112,7 +108,7 @@ class BinarySearchTree {
         }
     }
 }
-
+// console.log(updateInventory(id,inventoryCount));
 function inorderTraversal(root) {
     // Base case: an empty tree has no values to return
     if (root === null) {
