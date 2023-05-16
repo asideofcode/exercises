@@ -9,9 +9,7 @@ class TreeNode {
 class Product {
     constructor({id, inventoryCount}) {
         this.id = id;
-        this.inventoryCount = inventoryCount;
-        
-       
+        this.inventoryCount = inventoryCount;   
     }
 }
 
@@ -23,11 +21,7 @@ class BinarySearchTree {
     search(id) {
             return this.searchRecursive(id, this.root);
         }
-        // console.error("you must implement search");
-        // 1. Start from the root node
-        // 2. Compare the current node with the search value. Return early if found
-        // 3. Determine if we should go left or right
-        // 4. Update the current node based on the decision from (3). Rinse and repeat from (2)
+    
     searchRecursive(id, currentNode) {
         if (currentNode === null) {
             return null ;
@@ -58,7 +52,6 @@ class BinarySearchTree {
     }
 
     buildTree(products) {
-        // console.error("you must implement buildTree");
         return this.exampleBuildTree(products)
     }
 
@@ -108,7 +101,6 @@ class BinarySearchTree {
         }
     }
 }
-// console.log(updateInventory(id,inventoryCount));
 function inorderTraversal(root) {
     // Base case: an empty tree has no values to return
     if (root === null) {
@@ -118,7 +110,6 @@ function inorderTraversal(root) {
     // Recursively traverse the left subtree, visit the current node, and then recursively traverse the right subtree
     return inorderTraversal(root.left).concat([root.val]).concat(inorderTraversal(root.right));
 }
-
 
 module.exports = {
     BinarySearchTree,
