@@ -9,7 +9,7 @@ class TreeNode {
 class Product {
     constructor({id, inventoryCount}) {
         this.id = id;
-        this.inventoryCount = inventoryCount;   
+        this.inventoryCount = inventoryCount;
     }
 }
 
@@ -20,7 +20,7 @@ class BinarySearchTree {
 
     search(id) {
             return this.searchRecursive(id, this.root);
-        }
+    }
     
     searchRecursive(id, currentNode) {
         if (currentNode === null) {
