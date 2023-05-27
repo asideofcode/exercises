@@ -34,17 +34,31 @@ class BinarySearchTree
 
   def search(id)
     # Comment out the line below and make changes here
-    raise "you must implement search"
+    # raise "you must implement search"
+    node = @root
+    
+    return nil if node == 0
+    return node.vale if node.val.id == id
+    return node = node.left if  id < node.val.id
+    return node = node.right if id > node.val.id
+
   end
+
 
   def update_inventory(id, inventory_count)
     # Comment out the line below and make changes here
-    raise "you must implement update_inventory"
+    # raise "you must implement update_inventory"
+    node = search(id)
+
+    if node
+      node.inventory_count = inventory_count
+    end
   end
 
   def build_tree(products)
     # Comment out the line below and make changes here
-    raise "you must implement build_tree"
+    # raise "you must implement build_tree"
+    example_build_tree(products)
   end
 
   private

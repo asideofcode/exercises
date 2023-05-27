@@ -1,4 +1,4 @@
-require "./exercise"
+require "./inventory_management"
 
 RSpec.describe BinarySearchTree do
   describe "#build_tree" do
@@ -31,7 +31,7 @@ RSpec.describe BinarySearchTree do
   describe "#update_inventory" do
     # Seperately create the product whose inventory count we intend to update so that we can use it in our test assertions
     let (:product_six) do
-      Product.new(id: 14, inventory_count: 7)
+      Product.new(id: 6, inventory_count: 7)
     end
 
     # Create a new binary search tree and populate it with products
@@ -83,8 +83,8 @@ RSpec.describe BinarySearchTree do
 
     it "returns the product with the given valid ID" do
       # Test that the search method returns the expected product when given a valid ID
-      expect(bst.search(6)).to eq product_nine
-      expect(bst.search(9)).to eq product_six
+      expect(bst.search(6)).to eq product_six
+      expect(bst.search(9)).to eq product_nine
     end
 
     it "returns nil if the product with the given ID does not exist in the tree" do
